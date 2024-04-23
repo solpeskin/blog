@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol Peskin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#yo">Sobre mí</a></li>
+            <li><a href="#familia">Mi familia</a></li>
+            <li><a href="#amigos">Mis amigos</a></li>
+        </ul>
+    </header>
+    <div id="inicio">
+        <div class="carousel-container">
+            <img class="carousel-image visible" src="img/carrousel1.jpg" alt="Imagen 1">
+            <img class="carousel-image " src="img/carrousel2.jpg" alt="Imagen 2">
+            <img class="carousel-image " src="img/carrousel3.jpg" alt="Imagen 3">
+        </div>
+
+        <h1>Sol Peskin</h1>
+    </div>
+    <div id="yo">
+        <h2>Mis gustos</h2>
+        <p>Algunos de los dibujos que he hecho en la pandemia...</p>
+        <div class="imagenes">
+            <div class="imagen1"></div>
+            <div class="imagen2"></div>
+        </div>
+    </div>
+    <div id="familia">
+        <h2>Mi familia</h2>
+        <div class="familia-content">
+            <div class="familia-imagen">
+                <div class="circulos circulo1"></div>
+                <div class="circulos circulo2"></div>
+                <div class="circulos circulo3"></div>
+            </div>
+            <div class="familia-texto">
+                <p>Tengo una familia muuuuy grande</p>
+                <p>somos todos muy unidos</p>
+            </div>
+        </div>
+    </div>
+    <div id="amigos">
+        <h2>Mis amigos</h2>
+        <div>
+            <img src="img/amigos1.jpg" alt="mica sorotski">
+            <img src="img/amigos2.JPG" alt="safariland">
+            <img src="img/amigos3.jpg" alt="miramar">
+        </div>
+    </div>
+
+    <!-- Botón para volver al inicio -->
+    <a href="#inicio" class="back-to-top">
+        <span>&uarr;</span>
+    </a>
+    
+    
+
+    <script>
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % carouselImages.length;
+            carouselImages[currentIndex].classList.remove('visible');
+            carouselImages[nextIndex].classList.add('visible');
+            currentIndex = nextIndex;
+        }, 3000);
+    </script>
+</body>
+</html>
